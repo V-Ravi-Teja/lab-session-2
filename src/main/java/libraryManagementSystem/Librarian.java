@@ -11,6 +11,10 @@ public class Librarian extends User{
 		this.employeeNumber = employeeNumber;
 	}
 	
+	Librarian(String name, String contactInfo, String employeeNumber){
+		super(name, contactInfo);
+		this.employeeNumber = employeeNumber;
+	}
 	
 	@Override
 	void displayDashboard() {
