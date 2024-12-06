@@ -2,7 +2,7 @@ package libraryManagementSystem;
 
 public class Member extends User{
 	private int borrowedBooksCount;
-	private int MAX_BORROW_LIMIT = 5;
+	private static final int MAX_BORROW_LIMIT = 5;
 	
 	public int getBorrowedBooksCount() {
 		return borrowedBooksCount;
@@ -14,10 +14,6 @@ public class Member extends User{
 	
 	public void setBorrowedBooksCount(int borrowedBooksCount) {
 		this.borrowedBooksCount = borrowedBooksCount;
-	}
-	
-	public void setMAX_BORROW_LIMIT(int MAX_BORROW_LIMIT) {
-		this.MAX_BORROW_LIMIT = MAX_BORROW_LIMIT;
 	}
 	
 	
@@ -32,7 +28,7 @@ public class Member extends User{
 	
 	@Override
 	boolean canBorrowBooks() {
-		return this.borrowedBooksCount < this.MAX_BORROW_LIMIT;
+		return this.borrowedBooksCount < MAX_BORROW_LIMIT;
 	}
 	
 	Member(){

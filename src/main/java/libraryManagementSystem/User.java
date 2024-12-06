@@ -5,7 +5,7 @@ package libraryManagementSystem;
 public abstract class User{
 	//Attributes
 	private String userId,name,contactInfo;
-	static int totalUsers = 5;
+	private static int totalUsers = 0;
 	
 	//Getters and Setters
 	
@@ -48,7 +48,8 @@ public abstract class User{
 	
 	//Methods
 	private final String generateUniqueId() {
-		return "0";
+		totalUsers++;
+		return "user-" + totalUsers;
 	}
 	
 	abstract void displayDashboard();
